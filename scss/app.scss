@@ -1,0 +1,251 @@
+//////////* ESTILO LETRA *//////////
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+//////////* VARIABLES *//////////
+$azulcito: #2c348b;
+$rojito: rgb(173, 6, 6);
+$gricesito: rgb(220, 220, 220);
+$gricesito2: rgb(180, 180, 180);
+$violetita: #dcdde9;
+$violetita2: #cccfd3;
+
+//////////* MIXINS *//////////
+@mixin transition-3s{
+    animation-duration: 3s;
+    animation-name: start;
+    animation-iteration-count: initial;
+}
+
+//////////* ESTILOS HEADER *//////////
+.header{
+    display: flex;
+    padding: 0px 15px;
+    height: 90px;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to bottom, $gricesito2, $gricesito);
+}
+.nav-link{
+    display: inline-block;
+    text-decoration: none;
+    padding: 2px 4px;
+    color: $azulcito;
+    font-size: 18;
+    font-weight: 600;
+    &:hover{
+        background-color: $azulcito;
+        color: $gricesito;
+        border-radius: 6px;
+        padding: 2px 4px;
+    }
+    &:active{
+        background-color: $rojito;
+    }
+}
+.nav-link1{
+    text-decoration: none;
+    color: $gricesito;
+    background-color: $azulcito;
+    font-size: 18;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 2px 4px;
+}
+.nav-separator{
+    text-decoration: none;
+    opacity: 0.55;
+    color: $rojito;
+}
+
+//////////* ESTILOS LOGOTIPO *//////////
+.header_logo{
+    width: auto;
+    height: 75px;
+    padding: 10px 10px;
+}
+//////////* ESTILO INDEX + GRID *//////////
+.container{
+    background-image: linear-gradient(to right, #cccfd3, #dcdde9);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 90px auto auto;
+    grid-template-areas:
+        "header header"
+        "img txt"
+        "img txt"
+        "footer footer";
+    min-height: 100vh;
+}
+.header{
+    grid-area: header;
+}
+.container_img{
+    padding: 20px 10px;
+    grid-area: img;
+}
+.container_text{
+    grid-area: txt;
+    padding: 40px 20px 0px 20px;
+    text-align: center;
+    justify-content: center;
+    animation-duration: 3s;
+    animation-name: start;
+    animation-iteration-count: initial;
+}
+.footer{
+    grid-area: footer;
+}
+#index_img{
+    border-radius: 20px;
+    width: 600px;
+    @include transition-3s;
+}
+#index_logo{
+    width: 300px;
+}
+#index_text{
+    font-family: 'Satisfy', cursive;
+    font-size: 30;
+    color: black;
+}
+
+//////////* FOOTER *//////////
+.footer{
+    display: flex;
+    height: 70px;
+    width: auto;
+    align-items: center;
+    justify-content: right;
+    padding: 5px 15px;
+    background-image: linear-gradient(to top, $gricesito2, $gricesito);
+}
+.contacto-footer{
+    display: inline;
+    color: black;
+    font-size: 16;
+    text-decoration: none;
+    padding: 10px;
+}
+.footer_navbar{
+    padding: 20px;
+}
+#footer_text{
+    margin-right: auto;
+}
+.footer_madeby{
+    text-decoration: none;
+    color: black;
+    font-size: 12;
+}
+
+//////////* GALERIA *//////////
+.galeria_img{
+    display: inline-flex;
+    justify-content: center;
+    width: 330;
+    height: 330;
+    object-fit: cover;
+    border-radius: 20px;
+}
+ul li{
+    display: flex;
+}
+
+//////////* NOSOTROS *//////////
+.img_puerto{
+    width: 100%;
+}
+
+//////////* ESTILO CONTACTO *//////////
+.container-contacto .contacto-list{
+    justify-content: center;
+}
+.contacto-list a{
+    color: black;
+    font-size: 18;
+    text-decoration: none;
+    margin-right: 20px;
+}
+.container-galeria{
+    padding: 20px 5px;
+    display: inline-block;
+    background-image: linear-gradient(to right, $violetita2, $violetita);
+    @include transition-3s;
+}
+.container-carta{
+    padding: 20px 10px;
+    background-image: linear-gradient(to right, $violetita2, $violetita);
+    @include transition-3s;
+}
+.container-contacto{
+    padding: 20px 10px;
+    height: auto;
+    background-image: linear-gradient(to right, $violetita2, $violetita);
+    @include transition-3s;
+}
+.container-nosotros{
+    padding: 20px 10px;
+    background-image: linear-gradient(to right, $violetita2, $violetita);
+    @include transition-3s;
+}
+.nosotros-text{
+    padding: 20px 10px;
+}
+//////////* VERSION MOVIL *//////////
+@media screen and (max-width: 1000px){
+    .container{
+        display: grid;
+        grid-template-areas:
+            "header  header"
+            "txt txt"
+            "img img"
+            "footer footer";
+        grid-template-rows: 60px auto;
+        min-height: 1vh;
+    }
+    #index_text{
+        font-size: 24;
+    }
+    .header_logo{
+        height: 60px;
+    }
+    .nav-link{
+        font-size: 14;
+    }
+    .nav-link1{
+        font-size: 14;
+    }
+    .footer_navbar{
+        padding: 1px;
+        justify-content: center;
+    }
+    #index_logo{
+        width: 200px;
+    }
+    .contacto-footer{
+        padding: 2px;
+    }
+    .container_img{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+@media screen and (max-width: 580px){
+    .header_logo{
+        display: none;
+    }
+    .header{
+        justify-content: space-around;
+    }
+    .galeria_img{
+        width: 100%;
+        padding: 5px 0px;
+    }
+    #index_img{
+        object-fit: cover;
+        width: 100%;
+    }
+}
