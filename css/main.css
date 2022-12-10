@@ -115,8 +115,7 @@ body {
   font-size: 12; }
 
 .galeria_img {
-  display: inline-flex;
-  justify-content: center;
+  padding: 2px 2px;
   width: 330;
   height: 330;
   object-fit: cover;
@@ -139,7 +138,10 @@ ul li {
 
 .container-galeria {
   padding: 20px 5px;
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   background-image: linear-gradient(to right, #cccfd3, #dcdde9);
   animation-duration: 3s;
   animation-name: start;
@@ -201,7 +203,6 @@ ul li {
   .header {
     justify-content: space-around; }
   .galeria_img {
-    width: 100%;
     padding: 5px 0px; }
   #index_img {
     object-fit: cover;
