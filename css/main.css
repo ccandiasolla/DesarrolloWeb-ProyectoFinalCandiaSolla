@@ -37,7 +37,8 @@ body {
 .nav-separator {
   text-decoration: none;
   opacity: 0.55;
-  color: #ad0606; }
+  color: #ad0606;
+  cursor: default; }
 
 .header_logo {
   width: auto;
@@ -85,7 +86,7 @@ body {
 #index_text {
   font-family: 'Satisfy', cursive;
   font-size: 30;
-  color: black; }
+  color: #2c348b; }
 
 .footer {
   display: flex;
@@ -132,7 +133,10 @@ ul li {
 h3 {
   color: #ad0606; }
 
-.container-contacto .contacto-list {
+ul {
+  padding-inline-start: 0px; }
+
+.contacto-list {
   justify-content: center; }
 
 .contacto-list a {
@@ -231,3 +235,7 @@ h3 {
     padding: 0px 20px; }
   .footer {
     padding: 1px; } }
+
+@media screen and (max-width: 400px) {
+  .galeria_img {
+    width: 100%; } }

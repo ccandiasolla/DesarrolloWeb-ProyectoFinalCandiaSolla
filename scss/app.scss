@@ -57,6 +57,7 @@ $violetita2: #cccfd3;
     text-decoration: none;
     opacity: 0.55;
     color: $rojito;
+    cursor: default;
 }
 
 //////////* ESTILOS LOGOTIPO *//////////
@@ -109,7 +110,7 @@ $violetita2: #cccfd3;
 #index_text{
     font-family: 'Satisfy', cursive;
     font-size: 30;
-    color: black;
+    color: $azulcito;
 }
 
 //////////* FOOTER *//////////
@@ -166,7 +167,10 @@ h3{
 }
 
 //////////* ESTILO CONTACTO *//////////
-.container-contacto .contacto-list{
+ul{
+    padding-inline-start: 0px;
+}
+.contacto-list{
     justify-content: center;
 }
 .contacto-list a{
@@ -279,5 +283,10 @@ h3{
     }
     .footer{
         padding: 1px;
+    }
+}
+@media screen and (max-width: 400px){
+    .galeria_img{
+        width: 100%;
     }
 }
