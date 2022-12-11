@@ -88,7 +88,7 @@ $violetita2: #cccfd3;
 }
 .container_text{
     grid-area: txt;
-    padding: 40px 20px 0px 20px;
+    padding: 40px;
     text-align: center;
     justify-content: center;
     animation-duration: 3s;
@@ -99,7 +99,7 @@ $violetita2: #cccfd3;
     grid-area: footer;
 }
 #index_img{
-    border-radius: 20px;
+    border-radius: 10px;
     width: 600px;
     @include transition-3s;
 }
@@ -143,11 +143,15 @@ $violetita2: #cccfd3;
 
 //////////* GALERIA *//////////
 .galeria_img{
-    padding: 2px 2px;
-    width: 330;
-    height: 330;
+    padding: 5px;
+    width: 300;
+    height: 300;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 10px;
+    &:hover{
+        zoom: 1.1;
+
+    }
 }
 ul li{
     display: flex;
@@ -157,6 +161,9 @@ ul li{
 .img_puerto{
     width: 100%;
 }
+h3{
+    color: $rojito;
+}
 
 //////////* ESTILO CONTACTO *//////////
 .container-contacto .contacto-list{
@@ -164,9 +171,8 @@ ul li{
 }
 .contacto-list a{
     color: black;
-    font-size: 18;
+    font-size: 14;
     text-decoration: none;
-    margin-right: 20px;
 }
 .container-galeria{
     padding: 20px 5px;
@@ -195,11 +201,17 @@ ul li{
 }
 .nosotros-text{
     padding: 20px 10px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column
 }
 //////////* VERSION MOVIL *//////////
 @media screen and (max-width: 1000px){
     .container{
         display: grid;
+        grid-template-rows: auto auto auto auto;
         grid-template-areas:
             "header  header"
             "txt txt"
@@ -236,11 +248,24 @@ ul li{
     }
 }
 @media screen and (max-width: 580px){
-    .header_logo{
+    .nav-link{
+        font-size: 11;
+    }
+    .nav-link1{
+        font-size: 11;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    #index_logo{
         display: none;
     }
     .header{
-        justify-content: space-around;
+        display: flex;
+        padding: 0px 0px 10px 0px;
+        flex-direction: column;
+        height: fit-content;
     }
     .galeria_img{
         padding: 5px 0px;
@@ -248,5 +273,11 @@ ul li{
     #index_img{
         object-fit: cover;
         width: 100%;
+    }
+    .container_text{
+        padding: 0px 20px;
+    }
+    .footer{
+        padding: 1px;
     }
 }
