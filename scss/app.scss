@@ -253,10 +253,10 @@ ul{
 }
 @media screen and (max-width: 580px){
     .nav-link{
-        font-size: 11;
+        font-size: 14;
     }
     .nav-link1{
-        font-size: 11;
+        font-size: 14;
     }
     .container{
         display: flex;
@@ -285,8 +285,16 @@ ul{
         padding: 1px;
     }
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 450px){
     .galeria_img{
         width: 100%;
+    }
+}
+@media screen and (max-width: 300px){
+    .nav-link{
+        font-size: 11;
+    }
+    .nav-link1{
+        font-size: 11;
     }
 }
